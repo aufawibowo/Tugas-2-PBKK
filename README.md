@@ -29,9 +29,9 @@ public class DriverOjol {
 # Screenshot
 ![abc](img/home.JPG)
 url http://localhost:8081/spring-mvc-demo/
-![bcd](img/submit.JPG)
+![bcd](img/submit.jpg)
 http://localhost:8081/spring-mvc-demo/showForm
-![def](img/detil.JPG)
+![def](img/detil.jpg)
 http://localhost:8081/spring-mvc-demo/showDriver
 
 
