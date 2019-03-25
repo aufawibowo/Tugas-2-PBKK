@@ -17,13 +17,7 @@
 <title>Tugas 2 PBKK</title>
 </head>
 <body>
-	<div class="container pt-5">
-		<div class="row">
-			<div class="col text-center">
-				<h1 class="text-white text-center">Driver Ojol</h1>
-				<a href="showForm" class="btn btn-secondary mt-3">Input</a>
-			</div>
-		</div>
-	</div>
+	<h1 style ="color: white; font-size: 70px; text-align: center;vertical-align: middle;">Your Input is WRONG!!!</h1>
+	<a href="showForm" class="btn btn-secondary mt-3">Back</a>
 </body>
 </html>

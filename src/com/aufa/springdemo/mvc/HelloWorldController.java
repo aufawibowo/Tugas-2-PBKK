@@ -4,6 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -13,14 +16,9 @@ public class HelloWorldController {
 	
 	@RequestMapping("/showForm")
 	public String showForm() {
-		return "helloworld-form";
+		return "formDriver";
 	}
 	//need a controller method to process the HTML form
-	
-	@RequestMapping("/processForm")
-	public String processForm() {
-		return "helloworld";
-	}
 	
 	@RequestMapping("/processFormVersionTwo")
 	public String letsShoutDude(HttpServletRequest request, Model model) {
@@ -38,7 +36,21 @@ public class HelloWorldController {
 		model.addAttribute("message", result);
 		
 		
-		return "helloworld";
+		return "detailDriver";
+	}
+	
+	
+	@RequestMapping("/addDriver")
+	public String submitDriver( @ModelAttribute("driver") DriverOjol driver, BindingResult result, ModelMap model) {
+		if (result.hasErrors()) {
+			return "error";
+		}
+		
+		model.addAttribute("namaDriver", driver.getNamaDriver());
+		model.addAttribute("umur", driver.getUmur());
+		model.addAttribute("ktp", driver.getKtp());
+		return "detailDriver";
+		
 	}
 	
 	
